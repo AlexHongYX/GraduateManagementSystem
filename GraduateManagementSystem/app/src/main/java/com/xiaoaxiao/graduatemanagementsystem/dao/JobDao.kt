@@ -3,6 +3,7 @@ package com.xiaoaxiao.graduatemanagementsystem.dao
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
 import com.xiaoaxiao.graduatemanagementsystem.entity.Job
 import com.xiaoaxiao.graduatemanagementsystem.entity.Student
 
@@ -20,4 +21,10 @@ interface JobDao {
 
     @Query("select * from Job where jobId = :jobId")
     fun findJobById(jobId: Long): List<Job>
+
+    @Query("delete from Job where jobId = :jobId")
+    fun deleteJobByJobId(jobId: Long)
+
+    @Update
+    fun updateJob(job: Job)
 }

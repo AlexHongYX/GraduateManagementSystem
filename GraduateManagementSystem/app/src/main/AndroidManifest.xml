@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaoaxiao.graduatemanagementsystem">
-
     <!-- Required permissions are added here -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
@@ -14,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".student.JobDetailActivity"></activity>
+        <activity android:name=".teacher.JobChangedActivity"></activity>
+        <activity android:name=".student.JobDetailActivity" />
         <activity android:name=".student.JobListActivity" />
         <activity android:name=".student.StudentResumeActivity" />
         <activity android:name=".RegisterActivity" />
@@ -26,9 +26,12 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <!-- Document viewer activity declaration-->
-        <activity android:name="com.pdftron.pdf.controls.DocumentActivity" android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize" android:windowSoftInputMode="adjustPan" android:theme="@style/PDFTronAppTheme"/>
+        </activity> <!-- Document viewer activity declaration -->
+        <activity
+            android:name="com.pdftron.pdf.controls.DocumentActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize"
+            android:theme="@style/PDFTronAppTheme"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

@@ -1,4 +1,4 @@
-package com.xiaoaxiao.graduatemanagementsystem
+package com.xiaoaxiao.graduatemanagementsystem.student
 
 import android.content.Context
 import android.content.Intent
@@ -10,12 +10,12 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.xiaoaxiao.graduatemanagementsystem.R
 import com.xiaoaxiao.graduatemanagementsystem.database.AppDatabase
 import com.xiaoaxiao.graduatemanagementsystem.entity.Job
 import com.xiaoaxiao.graduatemanagementsystem.entity.StudentFavoriteJob
-import com.xiaoaxiao.graduatemanagementsystem.student.JobDetailActivity
 
-class JobAdapter(val jobList: List<Job>, val studentNumber: String,val context: Context) : RecyclerView.Adapter<JobAdapter.JobViewHolder>() {
+class StudentJobAdapter(val jobList: List<Job>, val studentNumber: String, val context: Context) : RecyclerView.Adapter<StudentJobAdapter.JobViewHolder>() {
 
     var mView: View? = null
 

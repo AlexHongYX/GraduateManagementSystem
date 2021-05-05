@@ -5,7 +5,6 @@ import android.os.Bundle
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.xiaoaxiao.graduatemanagementsystem.JobAdapter
 import com.xiaoaxiao.graduatemanagementsystem.R
 import com.xiaoaxiao.graduatemanagementsystem.database.AppDatabase
 import com.xiaoaxiao.graduatemanagementsystem.entity.Job
@@ -66,7 +65,11 @@ class JobListActivity : AppCompatActivity() {
         }
 
         jobsRecyclerView.adapter =
-            JobAdapter(jobList,studentNumber,this)
+            StudentJobAdapter(
+                jobList,
+                studentNumber,
+                this
+            )
 
         jobsRecyclerView.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
 
